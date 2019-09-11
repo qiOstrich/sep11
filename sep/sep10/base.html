@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baseweb</title>
+    <style>
+        body{
+            width:800px;
+            margin:0 auto;
+        }
+        .content{
+            float:left;
+            width:500px;
+
+        }
+        .sidebar{
+            float:left;
+            width:300px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<!--导航条-->
+<div class="navbar">
+    <a href="http://localhost:8000/">别点</a>
+    <a href="http://localhost:8000/">这些</a>
+    <a href="http://localhost:8000/">按钮</a>
+    <a href="http://localhost:8000/">因为</a>
+    <a href="http://localhost:8000/">一点</a>
+    <a href="http://localhost:8000/">没用</a>
+
+</div>
+<!--主体内容-->
+<div class="content">
+    {% block content %}
+    Have not any informations.
+    {% end %}
+</div>
+<!--边栏-->
+<div class="sidebar">
+
+        {% block sidebarid %}
+        Have not any informations.
+        {% end %}
+
+
+</div>
+</body>
+</html>

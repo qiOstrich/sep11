@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wharever</title>
+</head>
+<body>
+<form action="/" method="post">
+    id:<input type="text" name="id" value=""><br/>
+    name:<input type="text" name="name" value=""><br/>
+    sex:<input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女<br/>
+    city:<input type="text" name="city" value=""><br/>
+    简介:<textarea name="desc"></textarea><br/>
+    birth:<br/>
+    year<input type="text" name="year">
+    month<input type="text" name="month">
+    day<input type="text" name="day"><br/>
+    独生子:<input type="radio" name="child" value="1">是
+    <input type="radio" name="child" value="0">否
+    <br/>
+    <input type="submit">
+    <input type="reset" value="重置!!!慎点!!!">
+</form>
+<form action="/select" method="post">
+    请输入需要查询的id:<input type="text" name="id" value="">
+    <br/>
+    <input type="submit">
+</form>
+
+<a href="localhost:8880/select">通过ID查找</a><br/>
+<a href="localhost:8880/update">修改数据</a>
+
+</body>
+</html>

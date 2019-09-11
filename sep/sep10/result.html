@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr/>
+请在侧边栏点击你需要查询的ID！
+{% end %}
+
+{% block sidebarid %}
+<ul>
+    {% for num in counts %}
+    <li><a href="http://localhost:8000/show/?id={{ num }}">id：{{ num }}</a></li>
+    {% end %}
+</ul>
+{% end %}

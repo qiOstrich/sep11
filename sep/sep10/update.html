@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加和修改数据</title>
+</head>
+<body>
+<form action="http://localhost:8000/update" method="post">
+    <table>
+        <tr>
+            <td>id: <input type="text" name="id"></td>
+        </tr>
+
+        <tr>
+            <td>name: <input type="text" name="name"></td>
+        </tr>
+
+        <tr>
+            <td>sex: <input type="text" name="sex"></td>
+        </tr>
+        <tr>
+            <td>city: <input type="text" name="city"></td>
+        </tr>
+        <tr>
+            <td>
+                description: <textarea name="desc"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>birthday:
+                <select name="birthyear" id="year">
+
+                </select>
+                <select name="birthmonth" id="month">
+
+                </select>
+                <select name="birthday" id="day">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>独生：
+                <select name="child">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td><input type="submit"></td>
+            <td><a href="http://localhost:8000/">返回主页</a></td>
+        </tr>
+
+    </table>
+</form>
+<script>
+    var obj_year = document.getElementById('year')
+    var obj_month =document.getElementById('month')
+    var obj_day =document.getElementById('day')
+
+    for (i=1900; i<2020;i++){
+        obj_year.options.add(new Option(i,i))
+    }
+    for (i = 1; i<13;i++){
+        obj_month.options.add(new Option(i,i))
+    }
+    for (i=1 ; i<32 ;i++){
+        obj_day.options.add(new Option(i,i))
+    }
+
+</script>
+</body>
+</html>

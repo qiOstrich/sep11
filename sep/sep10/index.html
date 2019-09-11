@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{% if sex=='male' %}
+<div><h1>先生，你好。</h1></div>
+{% elif sex=='female' %}
+<div><h1>美女，你好。</h1></div>
+{% else %}
+<div><h1>你好，不愿透露性别的女士。</h1></div>
+{% end %}
+<div><a href="http://localhost:8000/query">点击查询数据库</a></div>
+<div><a href="http://localhost:8000/update">点击增加和修改数据库</a></div>
+<div><a href="http://localhost:8000/delete">点击进入删除界面</a></div>
+
+</body>
+</html>

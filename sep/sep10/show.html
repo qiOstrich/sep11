@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr/>
+<table>
+
+    <tr>
+        <td>id:{{ id }}</td>
+    </tr>
+    <tr>
+        <td>name:{{name}}</td>
+    </tr>
+    <tr>
+        <td>sex:{{sex}}</td>
+    </tr>
+    <tr>
+        <td>city:{{city}}</td>
+    </tr>
+    <tr>
+        <td>desc:{{desc}}</td>
+    </tr>
+    <tr>
+        <td>birth:{{birth}}</td>
+    </tr>
+    <tr>
+        <td>
+            {% if child==1 %}
+            是独生子
+            {% elif child==0 %}
+            不是独生子
+            {% end %}
+        </td>
+    </tr>
+</table>
+{% end %}
+
+{% block sidebarid %}
+<ul>
+    {% for num in counts %}
+    <li><a href="http://localhost:8000/show/?id={{ num }}">id：{{ num }}</a></li>
+    {% end %}
+</ul>
+{% end %}
